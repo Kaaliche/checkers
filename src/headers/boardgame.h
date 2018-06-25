@@ -1,2 +1,3 @@
 void initBoard(boardgame*);
-void printBoard(int*);
+void printLine(int, boardgame*);
+void printBoard(boardgame*);

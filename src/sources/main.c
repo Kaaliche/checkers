@@ -6,5 +6,6 @@
 int main(int argc, char** argv){
 	struct boardgame* board;
 	initBoard(board);
-	printBoard(board->board[10][10]);
+	printBoard(board);
+	return 0;
 }

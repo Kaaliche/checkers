@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/checkers.dir/boardgame.c.o CMakeFiles/checkers.dir/main.c.o  -o checkers 

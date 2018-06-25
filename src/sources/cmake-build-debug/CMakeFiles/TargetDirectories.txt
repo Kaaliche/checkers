@@ -1,0 +1,3 @@
+/home/adr1pet/C_PROJECT/checkers/src/sources/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/adr1pet/C_PROJECT/checkers/src/sources/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/adr1pet/C_PROJECT/checkers/src/sources/cmake-build-debug/CMakeFiles/checkers.dir

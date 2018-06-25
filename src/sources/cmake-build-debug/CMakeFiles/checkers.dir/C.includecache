@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adr1pet/C_PROJECT/checkers/src/headers/boardgame.h
+
+/home/adr1pet/C_PROJECT/checkers/src/sources/boardgame.c
+stdlib.h
+-
+stdio.h
+-
+../headers/boardgame.h
+/home/adr1pet/C_PROJECT/checkers/src/headers/boardgame.h
+
+/home/adr1pet/C_PROJECT/checkers/src/sources/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+../headers/boardgame.h
+/home/adr1pet/C_PROJECT/checkers/src/headers/boardgame.h
+

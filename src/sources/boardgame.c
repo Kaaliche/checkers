@@ -65,12 +65,12 @@ void initBoard(boardgame* board){
 	}
 }
 
-void printLine(int i, int board[10][10]){
+void printLine(int i, boardgame* board){
 	int j = 0;
 	printf(" %2d ", i+1);
 
 	for(j = 0; j < 10; j++) {
-		switch(board[i][j]) {
+		switch(board->board[i][j]) {
 			case BLACK:
 				printf("| B ");
 				break;
@@ -92,12 +92,12 @@ void printLine(int i, int board[10][10]){
 	printf(" |-------------------------------------------|\n");
 }
 
-void printBoard(int board[10][10]){
+void printBoard(boardgame* board){
 	int i = 0;
 	printf("  A   B   C   D   E   F   G   H   I   J  \n");
-	printf(" |----------------------------------------|\n")
+	printf(" |----------------------------------------|\n");
 	for(i = 0; i < 10; i++){
-		printLine(i, board);
+		printLine(i, board->board);
 	}
 	printf("  A   B   C   D   E   F   G   H   I   J  \n");
 }
