@@ -30,6 +30,16 @@ typedef struct boardgame {
 void initBoard(struct boardgame*);
 void printLine(int, struct boardgame*);
 void printBoard(struct boardgame*);
+void printHelp();
 void movePawn(int, struct move, int, struct boardgame*);
 int testMove(int, struct move, struct boardgame*);
-//int maxTakenPawns(struct cell, int, struct boardgame*, listCells*, int*);
+int testCell(struct cell);
+int readMove(struct move*, struct boardgame*);
+struct boardgame* copy(struct boardgame*);
+int checkTakenPawn(int, int, int, struct boardgame*, cell[]);
+int maxTakenPawns(struct cell, int, struct boardgame*, listCells*, int*);
+void printMove(listCells*, int, int, struct boardgame*);
+int playerTurn(struct boardgame*, int*, int, listCells*, int);
+int selectPawn(int, boardgame*);
+void makeMove(listCells, int, struct boardgame*);
+void promotePawn(struct boardgame*, int);
