@@ -513,3 +513,48 @@ void promotePawn(boardgame* board, int color){
 			board->board[i][j] = 2 * color;
 	}
 }
+int testMoveQueen(boardgame* board, int color, move m){
+	int i = m.init.line;
+	int j = m.init.col;
+
+	if(board->board[i][j] != color * 2) {
+		printf("This pawn is not a Queen !\n");
+		return -1;
+	}
+
+	while(i != m.fin.line || j != m.fin.col) {
+		if(m.fin.line > m.init.line) {
+			i++;
+		} else {
+			i--;
+		}
+		if(m.fin.col > m.init.col) {
+			j++;
+		} else {
+			j--;
+		}
+		if(board->board[i][j] != EMPTY) {
+			printf("The position you're trying to reach is not empty !");
+			return -1;
+		}
+	}
+	return 1;
+}
+
+void moveQueen(boardgame* board, int color, move m, int i, cell taken) {
+	if(m.init.line == m.fin.line && m.init.col == m.fin.col) {
+		return;
+	}
+	board->board[m.init.line][m.init.col] = EMPTY;
+	board->board[m.fin.line][m.fin.col] = 2 * color;
+
+	if(i == 1 && (board->board[taken.line][taken.col]==-color || board->board[taken.line][taken.col] == -color * 2)) {
+		board->board[taken.line][taken.col] = EMPTY;
+
+		if(color == WHITE) {
+			board->nb_black = board->nb_black - 1;
+		} else {
+			board->nb_white = board->nb_white - 1;
+		}
+	}
+}

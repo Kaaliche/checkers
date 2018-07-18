@@ -43,3 +43,5 @@ int playerTurn(struct boardgame*, int*, int, listCells*, int);
 int selectPawn(int, boardgame*);
 void makeMove(listCells, int, struct boardgame*);
 void promotePawn(struct boardgame*, int);
+int testMoveQueen(struct boardgame*, int, struct move);
+void moveQueen(struct boardgame*, int, struct move, int, struct cell);
