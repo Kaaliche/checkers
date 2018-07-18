@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045b311-7013-4b7f-abe7-da83a0ffc02a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/headers/boardgame.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/headers/boardgame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sources/boardgame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/sources/boardgame.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/src/sources/cmake-build-debug/" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="boardgame.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sources/boardgame.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="536" column="70" selection-start-line="536" selection-start-column="70" selection-end-line="536" selection-end-column="70" />
+            <state relative-caret-position="-3557">
+              <caret line="343" column="18" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -194,12 +193,12 @@
       <workItem from="1531726632756" duration="635000" />
       <workItem from="1531741563045" duration="598000" />
       <workItem from="1531744482774" duration="783000" />
-      <workItem from="1531833642127" duration="7936000" />
+      <workItem from="1531833642127" duration="8173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40874000" />
+    <option name="totallyTimeSpent" value="41111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1297" height="675" extended-state="6" />
@@ -528,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sources/boardgame.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="536" column="70" selection-start-line="536" selection-start-column="70" selection-end-line="536" selection-end-column="70" />
+        <state relative-caret-position="-3557">
+          <caret line="343" column="18" selection-start-line="343" selection-start-column="18" selection-end-line="343" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

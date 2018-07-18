@@ -339,6 +339,11 @@ void makeMove(listCells clone, int color, boardgame* board) {
 	}
 }
 
+/*
+ *
+ * Print the rafle
+ *
+ */
 void printRafle(listCells rafle) {
 	listCells clone = rafle;
 
@@ -349,6 +354,11 @@ void printRafle(listCells rafle) {
 	printf("\n");
 }
 
+/*
+ *
+ * Print the possible moves
+ *
+ */
 void printMove(listCells* rafle, int a, int color, boardgame* board) {
 	int b = 0, i = 0;
 
@@ -367,6 +377,11 @@ void printMove(listCells* rafle, int a, int color, boardgame* board) {
 	}while(b == 0);
 }
 
+/*
+ *
+ * Function to manage the turn of a player
+ *
+ */
 int playerTurn(boardgame* board, int* color, int n, listCells* rafle, int move) {
 	if(move > 0) {
 		printMove(rafle, n, *color, board);
@@ -379,6 +394,12 @@ int playerTurn(boardgame* board, int* color, int n, listCells* rafle, int move) 
 #endif
 
 
+/*
+ *
+ * Function to copy the actual board for testing purpose
+ * in other functions
+ *
+ */
 struct boardgame* copy(boardgame* board) {
 	struct boardgame* board2 = malloc(sizeof(boardgame));
 	int i, j = 0;
@@ -395,6 +416,11 @@ struct boardgame* copy(boardgame* board) {
 	return board2;
 }
 
+/*
+ *
+ * Function to check if there are pawns that can be taken
+ *
+ */
 int checkTakenPawn(int col, int line, int color, boardgame* board, cell* tab){
     int cnt = 0;
     if(line - 2 >= 0 && col - 2 >= 0 && board->board[line-2][col-2] == EMPTY) {
@@ -431,7 +457,12 @@ int checkTakenPawn(int col, int line, int color, boardgame* board, cell* tab){
     return cnt;
 }
 
-
+/*
+ *
+ * Function to calculate the maximum number of pawns
+ * that can be taken in one move (rafle)
+ *
+ */
 int maxTakenPawns(cell c, int color, boardgame* board, listCells* maxRafle, int* a){
     int taken = 0;
     int maxTaken = 0;
@@ -499,6 +530,12 @@ int maxTakenPawns(cell c, int color, boardgame* board, listCells* maxRafle, int*
     return taken + maxFoundTaken;
 }
 
+
+/*
+ *
+ * Function to promote a regular pawn to a Queen
+ *
+ */
 void promotePawn(boardgame* board, int color){
 	int i = 0, j = 0;
 	if(color == BLACK) {
@@ -513,6 +550,12 @@ void promotePawn(boardgame* board, int color){
 			board->board[i][j] = 2 * color;
 	}
 }
+
+/*
+ *
+ * Function to test is selected pawn is a Queen and its move
+ *
+ */
 int testMoveQueen(boardgame* board, int color, move m){
 	int i = m.init.line;
 	int j = m.init.col;
@@ -541,6 +584,11 @@ int testMoveQueen(boardgame* board, int color, move m){
 	return 1;
 }
 
+/*
+ *
+ * Function to execute the movement of the queen
+ *
+ */
 void moveQueen(boardgame* board, int color, move m, int i, cell taken) {
 	if(m.init.line == m.fin.line && m.init.col == m.fin.col) {
 		return;
